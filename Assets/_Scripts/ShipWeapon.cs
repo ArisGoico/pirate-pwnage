@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ShipFire : MonoBehaviour {
+public class ShipWeapon : MonoBehaviour {
+
 
 
 	private GameObject target;
@@ -14,6 +15,10 @@ public class ShipFire : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
+	}
+
+	void OnColliderEnter() {
+
 	}
 }
