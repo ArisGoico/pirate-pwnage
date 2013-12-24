@@ -32,14 +32,7 @@ public class Movement : MonoBehaviour {
 			}
 		}
 		changeShip(initShip);
-//		GameObject temp = Instantiate(initShip, placeholderShip.position, placeholderShip.rotation) as GameObject;
-//		ship = temp;
-//		ship.transform.parent = this.transform;
-//		shipValues = ship.GetComponent<ShipValues>();
 		changeWeapon(initWeapon);
-//		temp = Instantiate(initWeapon, shipValues.placeholderWeapon.position, shipValues.placeholderWeapon.rotation) as GameObject;
-//		weapon = temp;
-//		weapon.transform.parent = ship.transform;
 	}
 	
 	// Movement
@@ -54,6 +47,9 @@ public class Movement : MonoBehaviour {
 	}
 
 	public void changeShip(GameObject newShip) {
+		if (ship != null) {
+			placeholderShip = ship.transform;
+		}
 		GameObject.Destroy(ship);
 		GameObject temp = Instantiate(newShip, placeholderShip.position, placeholderShip.rotation) as GameObject;
 		ship = temp;
