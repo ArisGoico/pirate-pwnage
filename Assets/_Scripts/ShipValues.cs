@@ -4,10 +4,12 @@ using System.Collections;
 
 public class ShipValues : MonoBehaviour {
 
-	public float shipDrag = 1f;
-	public float shipSpeed = 1f;
-	public float shipMass = 1f;
-	public float angularSpeed = 1f;
+	public int shipIntegrityMax				= 100;
+	public int shipIntegrityCurrent			= 100;
+	public float shipDrag 					= 1f;
+	public float shipSpeed 					= 1f;
+	public float shipMass 					= 1f;
+	public float angularSpeed 				= 1f;
 	public Transform placeholderWeapon;
 	public Transform placeholderSkill;
 
