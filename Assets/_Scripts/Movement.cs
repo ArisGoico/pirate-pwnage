@@ -25,7 +25,7 @@ public class Movement : MonoBehaviour {
 		foreach (Transform child in transform) {
 			if (child.tag == "MainCamera") {
 				cam = child.gameObject;
-				camInitPos = cam.transform.position;
+				camInitPos = cam.transform.localPosition;
 			}
 			if (child.tag == "PlaceholderShip") {
 				placeholderShip = child;

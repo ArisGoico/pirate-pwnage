@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initShip: {fileID: 100008, guid: c51a4c08e61334b4697e25daa5797532, type: 2}
-  initWeapon: {fileID: 0}
+  initWeapon: {fileID: 100000, guid: 88157ca8844e32749bbb89a667a49ffd, type: 2}
   initSkill: {fileID: 0}
 --- !u!124 &12400000
 Behaviour:
