@@ -7,12 +7,10 @@ public class ShipWeapon : MonoBehaviour {
 	public GameObject bullet;
 	public int damagePerHit = 1;
 	public float hitsPerSecond = 1f;
-	private float lastShot = 0f;
+	public float bulletSpeed = 10f;
 	private bool shooting = false;
-
 	private GameObject[] targets;
 	private int targetNum = 0;
-
 	private Transform placeHolderBullet;
 
 	// Use this for initialization
@@ -85,6 +83,12 @@ public class ShipWeapon : MonoBehaviour {
 	}
 
 	private void shootBullet() {
-		Instantiate(bullet, placeHolderBullet.position, placeHolderBullet.rotation);
+		GameObject bulletTemp = Instantiate(bullet, placeHolderBullet.position, placeHolderBullet.rotation) as GameObject;
+		BulletValues values = bulletTemp.GetComponent<BulletValues>();
+		values.damage = damagePerHit;
+		values.speed = bulletSpeed;
+		values.origin = placeHolderBullet.position;
+		values.target = targets[0];
+		bulletTemp.transform.parent = this.transform;
 	}
 }
