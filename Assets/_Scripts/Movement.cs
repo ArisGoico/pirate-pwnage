@@ -4,11 +4,6 @@ using System.Collections;
 
 public class Movement : MonoBehaviour {
 
-//	//Initial values for the prefab instantiation
-//	public GameObject initShip;
-//	public GameObject initWeapon;
-//	public GameObject initSkill;
-
 	//Internal values for the instantiated objects
 	private GameObject ship;
 	private GameObject weapon;
@@ -28,10 +23,6 @@ public class Movement : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake() {
-//		if (initShip == null) {
-//			Debug.LogError("No initial ship was assigned to Player " + this.name + ". No controls initialized.");
-//			this.enabled = false;
-//		}
 
 		foreach (Transform child in transform) {
 			if (child.tag == "MainCamera") {

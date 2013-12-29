@@ -64,7 +64,6 @@ public class PlayerGUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//Temporal function to change between ships
 		if (inShipyard) {
 			temporalControls();
 		}
@@ -72,7 +71,6 @@ public class PlayerGUI : MonoBehaviour {
 
 	public void setShipyard(bool value) {
 		inShipyard = value;
-		//		Debug.Log("Variable inShipyard = " + inShipyard + ".");
 	}
 
 	private void temporalControls() {
