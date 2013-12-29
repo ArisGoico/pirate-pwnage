@@ -5,7 +5,7 @@ public class Shipyard : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		if (other.transform.tag == "Ship") {
-			Movement temp = other.transform.parent.gameObject.GetComponent<Movement>();
+			PlayerGUI temp = other.transform.parent.gameObject.GetComponent<PlayerGUI>();
 			if (temp != null) {
 				temp.setShipyard(true);
 			}
@@ -14,7 +14,7 @@ public class Shipyard : MonoBehaviour {
 
 	void OnTriggerExit(Collider other) {
 		if (other.transform.tag == "Ship") {
-			Movement temp = other.transform.parent.gameObject.GetComponent<Movement>();
+			PlayerGUI temp = other.transform.parent.gameObject.GetComponent<PlayerGUI>();
 			if (temp != null) {
 				temp.setShipyard(false);
 			}

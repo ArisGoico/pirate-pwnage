@@ -3045,6 +3045,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: .908080935
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: de23e8db304be1a478b073eedfb1c477, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: de23e8db304be1a478b073eedfb1c477, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: de23e8db304be1a478b073eedfb1c477, type: 2}
@@ -3118,6 +3122,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 811218818}
   - 114: {fileID: 811218819}
+  - 114: {fileID: 811218820}
   m_Layer: 0
   m_Name: Simple Player
   m_TagString: Player
@@ -3150,9 +3155,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6424442de2850429f2cf165776306e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initShip: {fileID: 100008, guid: c51a4c08e61334b4697e25daa5797532, type: 2}
-  initWeapon: {fileID: 100000, guid: 88157ca8844e32749bbb89a667a49ffd, type: 2}
-  initSkill: {fileID: 0}
+--- !u!114 &811218820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: e6f019010998103448cd181bdbf0df56,
+    type: 2}
+  m_PrefabInternal: {fileID: 708271607}
+  m_GameObject: {fileID: 811218817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba1c3dbc5c0bb649807f91d02d13cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ships:
+  - {fileID: 100008, guid: c51a4c08e61334b4697e25daa5797532, type: 2}
+  - {fileID: 100008, guid: 94e9218ebd26125449e40e0a399545f3, type: 2}
+  weapons:
+  - {fileID: 100000, guid: 88157ca8844e32749bbb89a667a49ffd, type: 2}
+  - {fileID: 100000, guid: b4fbd9ce24b12b144a5727e37eec3650, type: 2}
+  skills: []
+  okButton: {fileID: 2800000, guid: ac13597fad61231448cc878343084ebb, type: 3}
 --- !u!1 &812018491
 GameObject:
   m_ObjectHideFlags: 0
@@ -3277,8 +3299,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 815877742}
-  m_LocalRotation: {x: -.382683486, y: 0, z: 0, w: .923879504}
-  m_LocalPosition: {x: 0, y: -15.6599998, z: -15}
+  m_LocalRotation: {x: .336905807, y: .0299146399, z: .0107087726, w: -.941002131}
+  m_LocalPosition: {x: 4.0876379, y: -2.91937399, z: 27.2317276}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1082880164}
@@ -3525,7 +3547,7 @@ Transform:
   m_LocalPosition: {x: 8.74768257, y: -10.9198332, z: 6.80428648}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1082880164}
 --- !u!1 &1082178136
 GameObject:
   m_ObjectHideFlags: 0
@@ -3540,7 +3562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1082178137
 Transform:
   m_ObjectHideFlags: 0
@@ -3587,6 +3609,7 @@ Transform:
   - {fileID: 1412787789}
   - {fileID: 910098039}
   - {fileID: 1559785001}
+  - {fileID: 1063353432}
   - {fileID: 815877744}
   m_Father: {fileID: 0}
 --- !u!1 &1096780437
@@ -4192,7 +4215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipIntegrityMax: 5000
-  shipIntegrityCurrent: 100
+  shipIntegrityCurrent: 5000
   shipDrag: 1
   shipSpeed: 1
   shipMass: 1

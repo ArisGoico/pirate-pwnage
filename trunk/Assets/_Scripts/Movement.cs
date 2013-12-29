@@ -4,10 +4,10 @@ using System.Collections;
 
 public class Movement : MonoBehaviour {
 
-	//Initial values for the prefab instantiation
-	public GameObject initShip;
-	public GameObject initWeapon;
-	public GameObject initSkill;
+//	//Initial values for the prefab instantiation
+//	public GameObject initShip;
+//	public GameObject initWeapon;
+//	public GameObject initSkill;
 
 	//Internal values for the instantiated objects
 	private GameObject ship;
@@ -23,16 +23,15 @@ public class Movement : MonoBehaviour {
 
 	//General private variables
 	private Transform placeholderShip;				//Placeholder for the instantiated ship
-	private bool inShipyard = false;
 
 
 
 	// Use this for initialization
-	void Start() {
-		if (initShip == null) {
-			Debug.LogError("No initial ship was assigned to Player " + this.name + ". No controls initialized.");
-			this.enabled = false;
-		}
+	void Awake() {
+//		if (initShip == null) {
+//			Debug.LogError("No initial ship was assigned to Player " + this.name + ". No controls initialized.");
+//			this.enabled = false;
+//		}
 
 		foreach (Transform child in transform) {
 			if (child.tag == "MainCamera") {
@@ -43,8 +42,7 @@ public class Movement : MonoBehaviour {
 				placeholderShip = child;
 			}
 		}
-		changeShip(initShip);
-		changeWeapon(initWeapon);
+
 	}
 	
 	// Movement
@@ -56,11 +54,6 @@ public class Movement : MonoBehaviour {
 		}
 		ship.rigidbody.AddForce(moveDir.magnitude * ship.transform.forward * shipValues.shipSpeed);
 		cam.transform.position = camInitPos + ship.transform.position;
-
-		//Temporal function to change between ships
-		if (inShipyard) {
-			temporalControls();
-		}
 	}
 
 	public void changeShip(GameObject newShip) {
@@ -81,23 +74,10 @@ public class Movement : MonoBehaviour {
 		weapon.transform.parent = ship.transform;
 	}
 
-	public void setShipyard(bool value) {
-		inShipyard = value;
-//		Debug.Log("Variable inShipyard = " + inShipyard + ".");
-	}
-
-	private void temporalControls() {
-		if (Input.GetKeyDown(KeyCode.Alpha1)) {
-			//Cambia barco
-			Debug.Log("Cambia barco");
-		}
-		if (Input.GetKeyDown(KeyCode.Alpha2)) {
-			//Cambia arma
-			Debug.Log("Cambia arma");
-		}
-		if (Input.GetKeyDown(KeyCode.Alpha3)) {
-			//Cambia skill
-			Debug.Log("Cambia skill");
-		}
+	public void changeSkill(GameObject newSkill) {
+		GameObject.Destroy(skill);
+		GameObject temp = Instantiate(newSkill, shipValues.placeholderSkill.position, shipValues.placeholderSkill.rotation) as GameObject;
+		skill = temp;
+		skill.transform.parent = ship.transform;
 	}
 }
