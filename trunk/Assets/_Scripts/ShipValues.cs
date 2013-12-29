@@ -26,7 +26,6 @@ public class ShipValues : MonoBehaviour {
 				placeholderWeapon = child;
 			}
 		}
-//		shipIntegrityCurrent = shipIntegrityMax;
 	}
 
 	void Update() {
