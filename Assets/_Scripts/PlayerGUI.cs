@@ -24,7 +24,7 @@ public class PlayerGUI : MonoBehaviour {
 	private bool inShipyard = false;
 
 	// Use this for initialization
-	void Start () {
+	void Awake() {
 		if (okButton == null) {
 			Debug.LogError ("Texture2D okButton is not initialized. Preventing errors, PlayerGUI script is disabled.");
 			this.enabled = false;
