@@ -16,6 +16,8 @@ public class PlayerGUI : MonoBehaviour {
 	private int actualSkill;
 
 	public Texture2D okButton;
+	
+	public int gold = 0;
 
 	private Movement shipMovement;
 
@@ -60,12 +62,13 @@ public class PlayerGUI : MonoBehaviour {
 		if (inShipyard) {
 			GUI.Label(new Rect(5f, 5f, 20f, 20f), okButton);
 		}
+		GUI.Label(new Rect(Screen.width - 40f, 5f, 35f, 35f), "Gold:\n" + gold);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (inShipyard) {
-			temporalControls();
+			changeControls();
 		}
 	}
 
@@ -73,7 +76,11 @@ public class PlayerGUI : MonoBehaviour {
 		inShipyard = value;
 	}
 
-	private void temporalControls() {
+	public void addGold(int value) {
+		gold += value;
+	}
+
+	private void changeControls() {
 		if (Input.GetKeyDown(KeyCode.Alpha1)) {
 			int temp = actualShip + 1;
 			if (temp >= ships.Length)
@@ -93,7 +100,11 @@ public class PlayerGUI : MonoBehaviour {
 			Debug.Log("Cambiada arma.");
 		}
 		if (Input.GetKeyDown(KeyCode.Alpha3)) {
-			//Cambia skill
+			int temp = actualSkill + 1;
+			if (temp >= skills.Length)
+				temp = 0;
+//			shipMovement.changeSkill(skills[temp]);
+			actualSkill = temp;
 			Debug.Log("Cambiada skill.");
 		}
 	}
