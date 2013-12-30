@@ -18,12 +18,11 @@ public class Movement : MonoBehaviour {
 
 	//General private variables
 	private Transform placeholderShip;				//Placeholder for the instantiated ship
-
+//	public bool movementType = false;
 
 
 	// Use this for initialization
 	void Awake() {
-
 		foreach (Transform child in transform) {
 			if (child.tag == "MainCamera") {
 				cam = child.gameObject;
@@ -33,7 +32,6 @@ public class Movement : MonoBehaviour {
 				placeholderShip = child;
 			}
 		}
-
 	}
 	
 	// Movement
