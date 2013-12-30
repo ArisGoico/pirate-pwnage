@@ -143,11 +143,13 @@ MonoBehaviour:
   ships:
   - {fileID: 100008, guid: c51a4c08e61334b4697e25daa5797532, type: 2}
   - {fileID: 100008, guid: 94e9218ebd26125449e40e0a399545f3, type: 2}
+  - {fileID: 100004, guid: de23e8db304be1a478b073eedfb1c477, type: 2}
   weapons:
   - {fileID: 100000, guid: 88157ca8844e32749bbb89a667a49ffd, type: 2}
   - {fileID: 100000, guid: b4fbd9ce24b12b144a5727e37eec3650, type: 2}
   skills: []
   okButton: {fileID: 2800000, guid: ac13597fad61231448cc878343084ebb, type: 3}
+  gold: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
