@@ -4,7 +4,7 @@
 QualitySettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_CurrentQuality: 3
+  m_CurrentQuality: 5
   m_QualitySettings:
   - serializedVersion: 2
     name: Fastest
@@ -58,7 +58,7 @@ QualitySettings:
     antiAliasing: 0
     softParticles: 0
     softVegetation: 0
-    vSyncCount: 0
+    vSyncCount: 1
     lodBias: .699999988
     maximumLODLevel: 0
     particleRaycastBudget: 64
@@ -103,20 +103,20 @@ QualitySettings:
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: Fantastic
-    pixelLightCount: 4
+    pixelLightCount: 6
     shadows: 2
-    shadowResolution: 2
+    shadowResolution: 3
     shadowProjection: 1
     shadowCascades: 4
-    shadowDistance: 150
+    shadowDistance: 200
     blendWeights: 4
     textureQuality: 0
     anisotropicTextures: 2
-    antiAliasing: 2
+    antiAliasing: 8
     softParticles: 1
     softVegetation: 1
     vSyncCount: 1
-    lodBias: 2
+    lodBias: 3
     maximumLODLevel: 0
     particleRaycastBudget: 4096
     excludedTargetPlatforms: []
@@ -126,10 +126,10 @@ QualitySettings:
     FlashPlayer: 3
     GLES Emulation: 3
     PS3: 3
-    Standalone: 3
+    Standalone: 5
     Tizen: 2
     WP8: 3
-    Web: 3
+    Web: 5
     Wii: 3
     Windows Store Apps: 3
     XBOX360: 3
