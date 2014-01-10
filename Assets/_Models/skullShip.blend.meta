@@ -4,7 +4,28 @@ ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
     100000: //RootNode
+    100002: hands
+    100004: shipBase
+    100006: skull
+    100008: turret_hardpoint
     400000: //RootNode
+    400002: hands
+    400004: shipBase
+    400006: skull
+    400008: turret_hardpoint
+    2300000: hands
+    2300002: shipBase
+    2300004: skull
+    2300006: turret_hardpoint
+    3300000: hands
+    3300002: shipBase
+    3300004: skull
+    3300006: turret_hardpoint
+    4300000: hands
+    4300002: skull
+    4300004: turret_hardpoint
+    4300006: shipBase
+    7400000: Default Take
     9500000: //RootNode
   materials:
     importMaterials: 1
