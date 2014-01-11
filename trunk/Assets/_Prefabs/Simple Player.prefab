@@ -142,9 +142,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ships:
   - {fileID: 100008, guid: c51a4c08e61334b4697e25daa5797532, type: 2}
-  - {fileID: 100002, guid: beaf269f9a2dd9649a5593b77fe370f6, type: 3}
-  - {fileID: 100000, guid: e005a37c28b36eb4a8fa0678e4421a50, type: 3}
-  - {fileID: 100000, guid: 9758d2aa671ce484ba06a60290a40bec, type: 3}
+  - {fileID: 100004, guid: de23e8db304be1a478b073eedfb1c477, type: 2}
+  - {fileID: 100008, guid: 3aa1e4aec61e21a4f84bca34ba814721, type: 2}
+  - {fileID: 100006, guid: 070da9e7bf22dbc4d87b1b205ee793e3, type: 2}
   weapons:
   - {fileID: 100000, guid: 88157ca8844e32749bbb89a667a49ffd, type: 2}
   - {fileID: 100000, guid: b4fbd9ce24b12b144a5727e37eec3650, type: 2}
