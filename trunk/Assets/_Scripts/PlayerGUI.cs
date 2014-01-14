@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class PlayerGUI : MonoBehaviour {
 
 	//Ships
@@ -14,29 +15,25 @@ public class PlayerGUI : MonoBehaviour {
 	//Skills
 	public GameObject[] skills;
 	private int actualSkill;
-
 	public Texture2D okButton;
-	
 	public int gold = 0;
-
 	private Movement shipMovement;
-
 	private bool inShipyard = false;
 
 	// Use this for initialization
 	void Awake() {
 		if (okButton == null) {
-			Debug.LogError ("Texture2D okButton is not initialized. Preventing errors, PlayerGUI script is disabled.");
+			Debug.LogError("Texture2D okButton is not initialized. Preventing errors, PlayerGUI script is disabled.");
 			this.enabled = false;
 			return;
 		}
 		if (ships == null) {
-			Debug.LogError ("Ships are not initialized. Preventing errors, PlayerGUI script is disabled.");
+			Debug.LogError("Ships are not initialized. Preventing errors, PlayerGUI script is disabled.");
 			this.enabled = false;
 			return;
 		}
 		if (weapons == null) {
-			Debug.LogError ("Weapons are not initialized. Preventing errors, PlayerGUI script is disabled.");
+			Debug.LogError("Weapons are not initialized. Preventing errors, PlayerGUI script is disabled.");
 			this.enabled = false;
 			return;
 		}
@@ -46,10 +43,13 @@ public class PlayerGUI : MonoBehaviour {
 //		}
 		shipMovement = this.gameObject.GetComponent<Movement>();
 		if (shipMovement == null) {
-			Debug.LogError ("Ship Movement script is not initialized. Preventing errors, PlayerGUI script is disabled.");
+			Debug.LogError("Ship Movement script is not initialized. Preventing errors, PlayerGUI script is disabled.");
 			this.enabled = false;
 			return;
 		}
+	}
+
+	void Start() {
 		shipMovement.changeShip(ships[0]);
 		actualShip = 0;
 		shipMovement.changeWeapon(weapons[0]);
@@ -66,7 +66,7 @@ public class PlayerGUI : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update() {
 		if (inShipyard) {
 			changeControls();
 		}
@@ -83,8 +83,9 @@ public class PlayerGUI : MonoBehaviour {
 	private void changeControls() {
 		if (Input.GetKeyDown(KeyCode.Alpha1)) {
 			int temp = actualShip + 1;
-			if (temp >= ships.Length)
+			if (temp >= ships.Length) {
 				temp = 0;
+			}
 			shipMovement.changeShip(ships[temp]);
 			actualShip = temp;
 			shipMovement.changeWeapon(weapons[actualWeapon]);
@@ -93,16 +94,18 @@ public class PlayerGUI : MonoBehaviour {
 		}
 		if (Input.GetKeyDown(KeyCode.Alpha2)) {
 			int temp = actualWeapon + 1;
-			if (temp >= weapons.Length)
+			if (temp >= weapons.Length) {
 				temp = 0;
+			}
 			shipMovement.changeWeapon(weapons[temp]);
 			actualWeapon = temp;
 			Debug.Log("Cambiada arma.");
 		}
 		if (Input.GetKeyDown(KeyCode.Alpha3)) {
 			int temp = actualSkill + 1;
-			if (temp >= skills.Length)
+			if (temp >= skills.Length) {
 				temp = 0;
+			}
 //			shipMovement.changeSkill(skills[temp]);
 			actualSkill = temp;
 			Debug.Log("Cambiada skill.");
