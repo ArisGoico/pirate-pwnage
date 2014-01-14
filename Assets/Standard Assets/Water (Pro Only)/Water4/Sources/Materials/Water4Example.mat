@@ -350,7 +350,7 @@ Material:
       data:
         first:
           name: _GAmplitude
-        second: {r: .140000001, g: .75999999, b: .174999997, a: .224999994}
+        second: {r: .140000001, g: .0500000007, b: .174999997, a: .200000003}
       data:
         first:
           name: _GFrequency
@@ -358,7 +358,7 @@ Material:
       data:
         first:
           name: _GSteepness
-        second: {r: 7, g: 2, b: 6, a: 2}
+        second: {r: 5, g: 2, b: 5, a: 2}
       data:
         first:
           name: _GSpeed
@@ -366,11 +366,11 @@ Material:
       data:
         first:
           name: _GDirectionAB
-        second: {r: .469143569, g: .354051262, b: -.200000003, a: .100000001}
+        second: {r: .469143569, g: .200000003, b: -.200000003, a: .100000001}
       data:
         first:
           name: _GDirectionCD
-        second: {r: .70338881, g: -.679999888, b: .717573524, a: -.200000003}
+        second: {r: .70338881, g: -.200000003, b: .717573524, a: -.200000003}
       data:
         first:
           name: _DepthColor
