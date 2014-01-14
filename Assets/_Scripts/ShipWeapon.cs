@@ -83,7 +83,7 @@ public class ShipWeapon : MonoBehaviour {
 	}
 
 	private void shootBullet() {
-		GameObject bulletTemp = Instantiate(bullet, placeHolderBullet.position, placeHolderBullet.rotation) as GameObject;
+		GameObject bulletTemp = PhotonNetwork.Instantiate(bullet.name, placeHolderBullet.position, placeHolderBullet.rotation, 0) as GameObject;
 		BulletValues values = bulletTemp.GetComponent<BulletValues>();
 		values.damage = damagePerHit;
 		values.speed = bulletSpeed;
