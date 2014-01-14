@@ -20,6 +20,9 @@ public class PlayerGUI : MonoBehaviour {
 	private Movement shipMovement;
 	private bool inShipyard = false;
 
+	//Network user or other player
+	public bool isControllable = false;
+
 	// Use this for initialization
 	void Awake() {
 		if (okButton == null) {
@@ -67,7 +70,7 @@ public class PlayerGUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update() {
-		if (inShipyard) {
+		if (isControllable && inShipyard) {
 			changeControls();
 		}
 	}

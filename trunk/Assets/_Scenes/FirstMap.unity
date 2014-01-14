@@ -755,8 +755,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 358701779}
-  m_LocalRotation: {x: .0282822791, y: .950060189, z: .297355384, w: -.0903638452}
-  m_LocalPosition: {x: 9.83583832, y: -49.4245644, z: -15.7308426}
+  m_LocalRotation: {x: .00359133584, y: .947920024, z: .0101944814, w: -.318324953}
+  m_LocalPosition: {x: 52.0406723, y: -53.9769554, z: 29.301403}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 850149142}
@@ -1639,7 +1639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ships:
-  - {fileID: 100008, guid: c51a4c08e61334b4697e25daa5797532, type: 2}
+  - {fileID: 100006, guid: a452e24268202b648bafe28b00010fab, type: 2}
   - {fileID: 100004, guid: de23e8db304be1a478b073eedfb1c477, type: 2}
   - {fileID: 100008, guid: 3aa1e4aec61e21a4f84bca34ba814721, type: 2}
   - {fileID: 100006, guid: 070da9e7bf22dbc4d87b1b205ee793e3, type: 2}
@@ -2375,7 +2375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TerrainData: {fileID: 15600000, guid: 217dd521ea1ecd34d97f9602ffcce817, type: 2}
   m_TreeDistance: 2000
-  m_TreeBillboardDistance: 50
+  m_TreeBillboardDistance: 150
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 250

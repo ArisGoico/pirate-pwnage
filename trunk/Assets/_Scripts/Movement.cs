@@ -20,6 +20,9 @@ public class Movement : MonoBehaviour {
 	private Transform placeholderShip;				//Placeholder for the instantiated ship
 //	public bool movementType = false;
 
+	//Network user or other player
+	public bool isControllable = false;
+
 
 	// Use this for initialization
 	void Awake() {
@@ -36,36 +39,42 @@ public class Movement : MonoBehaviour {
 	
 	// Movement
 	void Update() {
-		Vector3 moveDir = Vector3.zero;
-		moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-		if (moveDir.magnitude > 0f) {
-			ship.transform.rotation = Quaternion.RotateTowards(ship.transform.rotation, Quaternion.LookRotation(moveDir, Vector3.up), shipValues.angularSpeed);
+		if (isControllable) {
+			Vector3 moveDir = Vector3.zero;
+			moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+			if (moveDir.magnitude > 0f) {
+				ship.transform.rotation = Quaternion.RotateTowards(ship.transform.rotation, Quaternion.LookRotation(moveDir, Vector3.up), shipValues.angularSpeed);
+			}
+			ship.rigidbody.AddForce(moveDir.magnitude * ship.transform.forward * shipValues.shipSpeed);
+			cam.transform.position = camInitPos + ship.transform.position;
 		}
-		ship.rigidbody.AddForce(moveDir.magnitude * ship.transform.forward * shipValues.shipSpeed);
-		cam.transform.position = camInitPos + ship.transform.position;
 	}
 
 	public void changeShip(GameObject newShip) {
 		if (ship != null) {
 			placeholderShip = ship.transform;
+			PhotonNetwork.Destroy(ship);
 		}
-		GameObject.Destroy(ship);
-		GameObject temp = Instantiate(newShip, placeholderShip.position, placeholderShip.rotation) as GameObject;
+		GameObject temp = PhotonNetwork.Instantiate(newShip.name, placeholderShip.position, placeholderShip.rotation, 0) as GameObject;
 		ship = temp;
 		ship.transform.parent = this.transform;
 		shipValues = ship.GetComponent<ShipValues>();
 	}
 
 	public void changeWeapon(GameObject newWeapon) {
-		GameObject.Destroy(weapon);
-		GameObject temp = Instantiate(newWeapon, shipValues.placeholderWeapon.position, shipValues.placeholderWeapon.rotation) as GameObject;
+		if (weapon != null) {
+			PhotonNetwork.Destroy(weapon);
+		}
+		GameObject temp = PhotonNetwork.Instantiate(newWeapon.name, shipValues.placeholderWeapon.position, shipValues.placeholderWeapon.rotation, 0) as GameObject;
 		weapon = temp;
 		weapon.transform.parent = ship.transform;
 	}
 
 	public void changeSkill(GameObject newSkill) {
-		GameObject.Destroy(skill);
-		GameObject temp = Instantiate(newSkill, shipValues.placeholderSkill.position, shipValues.placeholderSkill.rotation) as GameObject;
+		if (skill != null) {
+			PhotonNetwork.Destroy(skill);
+		}
+		GameObject temp = PhotonNetwork.Instantiate(newSkill.name, shipValues.placeholderSkill.position, shipValues.placeholderSkill.rotation, 0) as GameObject;
 		skill = temp;
 		skill.transform.parent = ship.transform;
 	}
