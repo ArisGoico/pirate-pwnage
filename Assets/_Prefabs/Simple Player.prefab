@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ships:
-  - {fileID: 100008, guid: c51a4c08e61334b4697e25daa5797532, type: 2}
+  - {fileID: 100006, guid: a452e24268202b648bafe28b00010fab, type: 2}
   - {fileID: 100004, guid: de23e8db304be1a478b073eedfb1c477, type: 2}
   - {fileID: 100008, guid: 3aa1e4aec61e21a4f84bca34ba814721, type: 2}
   - {fileID: 100006, guid: 070da9e7bf22dbc4d87b1b205ee793e3, type: 2}
