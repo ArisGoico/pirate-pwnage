@@ -156,14 +156,6 @@ Material:
     m_Floats:
       data:
         first:
-          name: _InvFade
-        second: .628782988
-      data:
-        first:
-          name: _Shininess
-        second: 272
-      data:
-        first:
           name: _WaveScale
         second: .0462896563
       data:
@@ -180,8 +172,16 @@ Material:
         second: 3.18000007
       data:
         first:
+          name: _Shininess
+        second: 272
+      data:
+        first:
           name: _GerstnerIntensity
         second: .74000001
+      data:
+        first:
+          name: _InvFade
+        second: .628782988
       data:
         first:
           name: _HeightDisplacement
@@ -249,10 +249,6 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _MainTex_ST
-        second: {r: 1, g: 1, b: 0, a: 0}
-      data:
-        first:
           name: _Displacement
         second: {r: 6.6371665, g: 20.3539829, b: -1, a: -.681415975}
       data:
@@ -261,7 +257,7 @@ Material:
         second: {r: 1, g: 1, b: .100000001, a: .100000001}
       data:
         first:
-          name: _BumpMap_ST
+          name: _MainTex_ST
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
@@ -270,6 +266,10 @@ Material:
       data:
         first:
           name: _Fresnel_ST
+        second: {r: 1, g: 1, b: 0, a: 0}
+      data:
+        first:
+          name: _BumpMap_ST
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
