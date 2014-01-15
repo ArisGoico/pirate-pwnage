@@ -1,0 +1,6 @@
+Habilidades secundarias a desarrollar (en orden de preferencia):
+- Propulsores
+- Escudo
+- Minas
+- EMP
+- Arpón
