@@ -156,6 +156,10 @@ Material:
     m_Floats:
       data:
         first:
+          name: _Shininess
+        second: 272
+      data:
+        first:
           name: _WaveScale
         second: .0462896563
       data:
@@ -166,10 +170,6 @@ Material:
         first:
           name: _RefrDistort
         second: 1.43932855
-      data:
-        first:
-          name: _Shininess
-        second: 272
       data:
         first:
           name: _FresnelScale
