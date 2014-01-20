@@ -7,24 +7,34 @@ ModelImporter:
     100002: romanShip
     100004: //RootNode
     100006: turret_hardpoint
+    100008: skillplaceholder
+    100010: turretplaceholder
     400000: Cube
     400002: romanShip
     400004: //RootNode
     400006: turret_hardpoint
+    400008: skillplaceholder
+    400010: turretplaceholder
     2300000: Cube
     2300002: romanShip
     2300004: turret_hardpoint
+    2300006: skillplaceholder
+    2300008: turretplaceholder
     3300000: Cube
     3300002: romanShip
     3300004: turret_hardpoint
+    3300006: skillplaceholder
+    3300008: turretplaceholder
     4300000: Cube
     4300002: romanShip
     4300004: turret_hardpoint
+    4300006: skillplaceholder
+    4300008: turretplaceholder
     7400000: Default Take
     9500000: //RootNode
   materials:
-    importMaterials: 1
-    materialName: 0
+    importMaterials: 0
+    materialName: 1
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
@@ -72,5 +82,5 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   userData: 
