@@ -59,7 +59,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400006}
-  - 95: {fileID: 9500000}
   - 54: {fileID: 5400000}
   - 136: {fileID: 13600000}
   - 114: {fileID: 11400000}
@@ -184,8 +183,8 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 04ef8dc0129daca4a91e24702c4784ca, type: 2}
-  - {fileID: 2100000, guid: 04ef8dc0129daca4a91e24702c4784ca, type: 2}
+  - {fileID: 2100000, guid: 0d2a4cbccba870a4b81b20c62d45593e, type: 2}
+  - {fileID: 2100000, guid: 0d2a4cbccba870a4b81b20c62d45593e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -206,8 +205,8 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 77895d7fb0592f6438a92869d6564d06, type: 2}
-  - {fileID: 2100000, guid: 77895d7fb0592f6438a92869d6564d06, type: 2}
+  - {fileID: 2100000, guid: 72de51a7e61951d4e9d56c62d7a3ffad, type: 2}
+  - {fileID: 2100000, guid: a5d57b35a20d88e4ba2e16d2b007b9ab, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -228,8 +227,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 8926783ed37d2394d99dcf3bc2296f11, type: 2}
-  - {fileID: 2100000, guid: 6993642da9321b949bdd4ec878fb03b7, type: 2}
+  - {fileID: 2100000, guid: ee1edf309a2245a4bacb11de8527437d, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

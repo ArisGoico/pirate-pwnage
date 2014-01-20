@@ -27,29 +27,11 @@ Material:
           m_Texture: {fileID: 2800000, guid: e085b07aba9ce8444b14783b2db5ddbc, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Cube
-        second:
-          m_Texture: {fileID: 8900000, guid: 4ebce4875d78da14e8630471f453ae5b, type: 2}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _ParallaxMap
-        second:
-          m_Texture: {fileID: 2800000, guid: e085b07aba9ce8444b14783b2db5ddbc, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
           name: _Shininess
         second: 1
-      data:
-        first:
-          name: _Parallax
-        second: .0199999996
     m_Colors:
       data:
         first:
@@ -59,7 +41,3 @@ Material:
         first:
           name: _SpecColor
         second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _ReflectColor
-        second: {r: .433823526, g: .433823526, b: .433823526, a: .501960814}
